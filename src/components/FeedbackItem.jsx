@@ -9,7 +9,7 @@ function FeedbackItem({ item, handleDelete }) {
 
   //   const handleClick = () => {
   //     // prev default param for teh hook setRating automatically attaches to the
-  //     // hook value...wow!
+  //     // hook value!
   //     setRating((prev) => {
   //       console.log("prev on render", prev);
   //       return prev + 1;
