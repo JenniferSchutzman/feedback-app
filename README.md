@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+Links & Resources
+This is a list of links to resources that we use throughout the course:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CODE:
 
-## Available Scripts
+Feedback App Repo: https://github.com/bradtraversy/feedback-app
 
-In the project directory, you can run:
+Github Finder App Repo: https://github.com/bradtraversy/github-finder-app
 
-### `npm start`
+House Marketplace Repo: https://github.com/bradtraversy/house-marketplace
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Brad's Gists - https://gist.github.com/bradtraversy
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+TOOLS:
 
-### `npm test`
+https://code.visualstudio.com/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://git-scm.com/
 
-### `npm run build`
+https://nodejs.org/en/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://www.postman.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://chrome.google.com/webstore/detail/react-developer-tools
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+DOCS:
 
-### `npm run eject`
+https://reactjs.org/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+https://reactrouter.com/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://docs.github.com/en/rest
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+https://firebase.google.com/
 
-## Learn More
+https://leafletjs.com/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://swiperjs.com/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://tailwindcss.com/
 
-### Code Splitting
+https://tailwindcss.com/docs/guides/create-react-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+https://daisyui.com/
 
-### Analyzing the Bundle Size
+https://www.npmjs.com/package/concurrently
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+https://www.npmjs.com/package/json-server
 
-### Making a Progressive Web App
+https://www.npmjs.com/package/framer-motion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+https://www.npmjs.com/package/react-icons
 
-### Advanced Configuration
+https://www.npmjs.com/package/react-toastify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+https://www.npmjs.com/package/uuid
 
-### Deployment
+https://www.npmjs.com/package/axios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+COURSE HELPERS:
 
-### `npm run build` fails to minify
+Please follow these guys as they are incredibly talented and have contributed a lot to this course :)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Will Adams
+
+My right-hand man in the Udemy Q/A
+
+Github: https://github.com/bushblade
+
+Twitter: https://twitter.com/Bushblade
+
+Mitchel
+
+Helped with the House Marketplace App
+
+Github: https://github.com/MitchelSt
+
+YouTube Channel: https://www.youtube.com/channel/UC6W89Wklwaki9pc_qSquRtw
+
+Hassib
+
+Created the design for the Github Finder app
+
+Github: https://github.com/hassibmoddasser
+
+Twitter: https://twitter.com/hassibmoddasser
+
+Course content
+
+1. Welcome To The Course!
+   2min
+2. What Is React?
+   9min
+3. Environment Setup
+   6min
+4. Code Repos
+   2min
+5. Links & Resources
+   1min
+6. Feedback Project Intro
+   3min
+7. Create React App
+   7min
+8. Initializing React
+   7min
+9. Intro To JSX
+   7min
+10. Dynamic Values & LIsts in JSX
+    5min
+11. Conditionals in JSX
+    5min
+12. Creating Your First Component & Props
+    8min
+13. Adding Styles To A Component
+    6min
+14. State & useState Hook
+    8min
+15. Managing Global State
+    8min
+16. Card Component & Conditional Styles
+    10min
+17. Events & Prop Drilling
+    10min
+18. FeedbackStats Component & Reactivity
+    8min
+19. Form Input & State
+    6min
+20. Custom Button Component
+    5min
+21. Real-Time Validation
+    5min
+22. Rating Select Component
+    7min
+23. Add Feedback
+    7min
+24. Fade Animation With Framer Motion
+    4min
