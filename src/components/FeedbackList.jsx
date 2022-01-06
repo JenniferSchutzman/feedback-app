@@ -5,8 +5,8 @@ import FeedbackItem from "./FeedbackItem";
 import FeedbackContext from "../context/FeedbackContext";
 
 // function FeedbackList({ feedback, handleDelete }) {
-// removing feedback as a prop bc now getting from context instead - global state
-function FeedbackList({ handleDelete }) {
+// removing feedback and handleDelete as props bc now getting from context instead - global state
+function FeedbackList() {
   // here we can bring in anything in the FeedbackContext value prop
   const { feedback } = useContext(FeedbackContext);
 
@@ -23,20 +23,11 @@ function FeedbackList({ handleDelete }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <FeedbackItem
-              key={item.id}
-              item={item}
-              handleDelete={handleDelete}
-            />
+            <FeedbackItem key={item.id} item={item} />
           </motion.div>
         ))}
       </AnimatePresence>
     </div>
-    // <div className="feedback-list">
-    //   {feedback.map((item) => (
-    //     <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
-    //   ))}
-    // </div>
   );
 }
 

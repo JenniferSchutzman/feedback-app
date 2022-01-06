@@ -1,32 +1,21 @@
-// import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
+import { useContext } from "react";
+import { FaTimes, FaEdit } from "react-icons/fa";
 import PropTypes from "prop-types";
 import Card from "./shared/Card";
+import FeedbackContext from "../context/FeedbackContext";
 
-function FeedbackItem({ item, handleDelete }) {
-  //   const [rating, setRating] = useState(7);
-  //   const [text, setText] = useState("This is an example of a feedback item");
-
-  //   const handleClick = () => {
-  //     // prev default param for teh hook setRating automatically attaches to the
-  //     // hook value!
-  //     setRating((prev) => {
-  //       console.log("prev on render", prev);
-  //       return prev + 1;
-  //     });
-  //   };
-
+function FeedbackItem({ item }) {
+  const { deleteFeedback, editFeedback } = useContext(FeedbackContext);
   return (
-    // used prop with conditional class
-    // <Card reverse={true}>
-    // used defaultProps with conditional style
     <Card>
       <div className="num-display">{item.rating}</div>
-      <button onClick={() => handleDelete(item.id)} className="close">
+      <button onClick={() => deleteFeedback(item.id)} className="close">
         <FaTimes props="purple" />
       </button>
+      <button onClick={() => editFeedback(item)} className="edit">
+        <FaEdit color="purple" />
+      </button>
       <div className="text-display">{item.text}</div>
-      {/* <button onClick={handleClick}>Click</button> */}
     </Card>
   );
 }
