@@ -10,7 +10,8 @@ function FeedbackForm() {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
-  const { addFeedback, feedbackEdit } = useContext(FeedbackContext);
+  const { addFeedback, feedbackEdit, updateFeedback } =
+    useContext(FeedbackContext);
 
   useEffect(() => {
     if (feedbackEdit.edit === true) {
@@ -38,12 +39,15 @@ function FeedbackForm() {
     e.preventDefault();
     if (text.trim().length > 10) {
       const newFeedback = {
-        // short hand for {text: text, rating: rating}
         text,
         rating,
       };
-      addFeedback(newFeedback);
-      // reset text after submitting
+
+      if (feedbackEdit.edit === true) {
+        updateFeedback(feedbackEdit.item.id, newFeedback);
+      } else {
+        addFeedback(newFeedback);
+      }
       setText("");
     }
   };
