@@ -8,6 +8,7 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
+// import Post from "./components/Post";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -54,9 +55,13 @@ function App() {
           and the component now wrapper in JSX instead of just JS */}
           {/* <Route path="/about" component={AboutPage} /> */}
           <Route path="/about" element={<AboutPage />} />
-
-          <AboutIconLink />
+          {/* <Route path="/post/:id/:name" element={<Post />} /> */}
+          {/* The oath="/post/*" allows for another fixed route to be added afterwards 
+          This still differs from the loose path (versus exact path) because it will be fixed 
+          depending upong what is given after the * in the declaration of the route  */}
+          {/* <Route path="/post/*" element={<Post />} /> */}
         </Routes>
+        <AboutIconLink />
       </div>
     </Router>
   );
