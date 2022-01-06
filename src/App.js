@@ -8,6 +8,9 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
+// to use context, you have to...
+// ->  bring in the Provider to use as the wrapper
+import { FeedbackProvider } from "./context/FeedbackContext";
 // import Post from "./components/Post";
 
 function App() {
@@ -30,40 +33,43 @@ function App() {
   };
 
   return (
-    <Router>
-      <Header />
-      <div className="container">
-        {/* new v6 of react-router-dom has Routes as wrapper replacing Switch  */}
-        <Routes>
-          {/* use exact path because otherwise all routes will include that starting forward slash  */}
-          {/* stop mixing backward and forward slash naming; think of a person leaning forward or backward with their head at the top of the slash  */}
-          <Route
-            exact
-            path="/"
-            element={
-              <>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedback}
-                />
-              </>
-            }
-          ></Route>
-          {/* new v6 of react-router-dom has element as prop instead of component
+    <FeedbackProvider>
+      <Router>
+        <Header />
+        <div className="container">
+          {/* new v6 of react-router-dom has Routes as wrapper replacing Switch  */}
+          <Routes>
+            {/* use exact path because otherwise all routes will include that starting forward slash  */}
+            {/* stop mixing backward and forward slash naming; think of a person leaning forward or backward with their head at the top of the slash  */}
+            <Route
+              exact
+              path="/"
+              element={
+                <>
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />
+                  <FeedbackList
+                    // removing feedback prop passing bc adding to global state with context isntead
+                    // feedback={feedback}
+                    handleDelete={deleteFeedback}
+                  />
+                </>
+              }
+            ></Route>
+            {/* new v6 of react-router-dom has element as prop instead of component
           and the component now wrapper in JSX instead of just JS */}
-          {/* <Route path="/about" component={AboutPage} /> */}
-          <Route path="/about" element={<AboutPage />} />
-          {/* <Route path="/post/:id/:name" element={<Post />} /> */}
-          {/* The oath="/post/*" allows for another fixed route to be added afterwards 
+            {/* <Route path="/about" component={AboutPage} /> */}
+            <Route path="/about" element={<AboutPage />} />
+            {/* <Route path="/post/:id/:name" element={<Post />} /> */}
+            {/* The oath="/post/*" allows for another fixed route to be added afterwards 
           This still differs from the loose path (versus exact path) because it will be fixed 
           depending upong what is given after the * in the declaration of the route  */}
-          {/* <Route path="/post/*" element={<Post />} /> */}
-        </Routes>
-        <AboutIconLink />
-      </div>
-    </Router>
+            {/* <Route path="/post/*" element={<Post />} /> */}
+          </Routes>
+          <AboutIconLink />
+        </div>
+      </Router>
+    </FeedbackProvider>
   );
 }
 

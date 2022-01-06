@@ -1,8 +1,15 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import FeedbackItem from "./FeedbackItem";
+import FeedbackContext from "../context/FeedbackContext";
 
-function FeedbackList({ feedback, handleDelete }) {
+// function FeedbackList({ feedback, handleDelete }) {
+// removing feedback as a prop bc now getting from context instead - global state
+function FeedbackList({ handleDelete }) {
+  // here we can bring in anything in the FeedbackContext value prop
+  const { feedback } = useContext(FeedbackContext);
+
   if (!feedback || feedback.length === 0) {
     return <p>No feedback yet</p>;
   }
