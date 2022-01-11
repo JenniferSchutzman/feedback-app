@@ -3,6 +3,7 @@ import { useContext } from "react";
 import PropTypes from "prop-types";
 import FeedbackItem from "./FeedbackItem";
 import FeedbackContext from "../context/FeedbackContext";
+import Spinner from "./shared/Spinner";
 
 function FeedbackList() {
   // here we can bring in anything in the FeedbackContext value prop
@@ -13,7 +14,7 @@ function FeedbackList() {
   }
 
   return isLoading ? (
-    <h3>Loading...</h3>
+    <Spinner />
   ) : (
     <div className="feedback-list">
       <AnimatePresence>
