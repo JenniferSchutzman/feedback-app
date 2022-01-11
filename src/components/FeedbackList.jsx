@@ -4,16 +4,17 @@ import PropTypes from "prop-types";
 import FeedbackItem from "./FeedbackItem";
 import FeedbackContext from "../context/FeedbackContext";
 
-// function FeedbackList({ feedback, handleDelete }) {
-// removing feedback and handleDelete as props bc now getting from context instead - global state
 function FeedbackList() {
   // here we can bring in anything in the FeedbackContext value prop
-  const { feedback } = useContext(FeedbackContext);
+  const { feedback, isLoading } = useContext(FeedbackContext);
 
-  if (!feedback || feedback.length === 0) {
+  if (!isLoading && (!feedback || feedback.length === 0)) {
     return <p>No feedback yet</p>;
   }
-  return (
+
+  return isLoading ? (
+    <h3>Loading...</h3>
+  ) : (
     <div className="feedback-list">
       <AnimatePresence>
         {feedback.map((item) => (
